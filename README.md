@@ -6,6 +6,21 @@ A series of stdout-oriented Python scripts for processing, analyzing, and cluste
 
 This project processes movie review data through a pipeline of specialized scripts, each performing a specific transformation on the data stream. The pipeline converts CSV data to JSON, generates AI summaries, creates embeddings, and clusters similar reviews together.
 
+## Data Source
+
+The project uses movie review data from the [Rotten Tomatoes Movies Rating Dataset](https://www.kaggle.com/datasets/harshalpanchal/rotten-tomatoes-movies-rating) on Kaggle.
+
+### Download Instructions
+
+1. Visit the [dataset page](https://www.kaggle.com/datasets/harshalpanchal/rotten-tomatoes-movies-rating)
+2. Click the "Download" button (requires Kaggle account)
+3. Extract the downloaded zip file
+4. Place the CSV file in the `data/` directory:
+   ```bash
+   mkdir -p data
+   mv rotten_tomatoes_movies.csv data/reviews.csv
+   ```
+
 ## Pipeline Components
 
 1. `tojson.py` - Converts CSV input to line-oriented JSON
@@ -97,4 +112,4 @@ jq
 
 ## License
 
-MIT License 
+MIT License

@@ -4,6 +4,15 @@
 
 The project consists of a series of stdout-oriented Python scripts that process movie review data through a pipeline. Each script performs a specific transformation on the data stream, with the output of one script serving as the input to the next.
 
+## Data Source
+
+The project uses the [Rotten Tomatoes Movies Rating Dataset](https://www.kaggle.com/datasets/harshalpanchal/rotten-tomatoes-movies-rating) from Kaggle. This dataset contains:
+- Movie reviews and ratings
+- Review content and type (fresh/rotten)
+- Additional metadata about the movies
+
+The data is processed in its original CSV format and transformed through the pipeline to generate insights and clusters.
+
 ## Data Flow
 
 1. CSV → JSON (`tojson.py`)
@@ -78,10 +87,3 @@ The project consists of a series of stdout-oriented Python scripts that process 
 - Configurable batch sizes and cluster counts
 - Flexible model selection for embeddings
 - Logging to stderr for easy redirection
-
-# Files
-
-- src/tojson.py -- converts csv to line-oriented json
-- src/summarize.py -- adds summaries to data
-- src/embed.py -- adds embeddings 
-- src/cluster.py -- puts embeddings in FAISS db and creates clusters
