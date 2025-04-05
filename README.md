@@ -55,12 +55,16 @@ jq
 ### Scripts
 
 - src/tojson.py
+
   Converts csv to line-oriented json file
 - src/summarize.py
+
   Summarizes movie review/rating combos
 - src/embed.py
+
   Embeds summary text
 - src/cluster.py
+
   Clusters reviews and provides descriptions/categories of each cluster
 
 ## Requirements
