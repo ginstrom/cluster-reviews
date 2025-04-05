@@ -52,28 +52,16 @@ python src/cluster.py --clusters 10 | \
 jq
 ```
 
-### Script Options
+### Scripts
 
-- `tojson.py`: Converts CSV to line-oriented JSON
-  ```bash
-  python src/tojson.py --input data/reviews.csv --output data/reviews.json
-  ```
-
-- `summarize.py`: Generates AI summaries
-  ```bash
-  python src/summarize.py --batch-size 10
-  ```
-
-- `embed.py`: Creates embeddings
-  ```bash
-  python src/embed.py --model all-MiniLM-L6-v2
-  ```
-
-- `cluster.py`: Creates clusters and generates summaries
-  ```bash
-  python src/cluster.py --clusters 10
-  ```
-
+- src/tojson.py
+  Converts csv to line-oriented json file
+- src/summarize.py
+  Summarizes movie review/rating combos
+- src/embed.py
+  Embeds summary text
+- src/cluster.py
+  Clusters reviews and provides descriptions/categories of each cluster
 
 ## Requirements
 
