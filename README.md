@@ -4,7 +4,11 @@ A series of stdout-oriented Python scripts for processing, analyzing, and cluste
 
 ## Overview
 
-This project processes movie review data through a pipeline of specialized scripts, each performing a specific transformation on the data stream. The pipeline converts CSV data to JSON, generates AI summaries, creates embeddings, and clusters similar reviews together.
+This set of scripts:
+
+- Creates summaries of movie reviews (Rotten Tomatoes, see below)
+- Embeds these summaries and puts them in a vector db (FAISS)
+- Clusters the reviews and provides description/category of each cluster
 
 ## Data Source
 
