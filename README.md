@@ -21,13 +21,6 @@ The project uses movie review data from the [Rotten Tomatoes Movies Rating Datas
    mv rotten_tomatoes_movies.csv data/reviews.csv
    ```
 
-## Pipeline Components
-
-1. `tojson.py` - Converts CSV input to line-oriented JSON
-2. `summarize.py` - Adds AI-generated summaries to the data using OpenAI's GPT-3.5
-3. `embed.py` - Generates sentence embeddings using sentence-transformers
-4. `cluster.py` - Creates clusters from embeddings using FAISS and generates cluster summaries
-
 ## Setup
 
 1. Create and activate a virtual environment:
@@ -81,34 +74,11 @@ jq
   python src/cluster.py --clusters 10
   ```
 
-## Project Structure
-
-```
-.
-├── src/
-│   ├── tojson.py      # CSV to JSON converter
-│   ├── summarize.py   # AI summarization
-│   ├── embed.py       # Sentence embedding generator
-│   └── cluster.py     # FAISS clustering and analysis
-├── data/              # Input data directory
-├── docs/              # Documentation
-├── requirements.txt   # Python dependencies
-└── .env              # Environment variables (not in git)
-```
 
 ## Requirements
 
 - Python 3.x
-- See `requirements.txt` for Python package dependencies:
-  - numpy>=1.24.0,<2.0.0
-  - pandas>=2.0.0
-  - faiss-cpu>=1.7.4
-  - scikit-learn>=1.3.0
-  - tqdm>=4.65.0
-  - python-dotenv>=1.0.0
-  - openai>=1.0.0
-  - sentence-transformers>=2.2.2
-  - torch>=2.0.0
+- See `requirements.txt` for Python package dependencies
 
 ## License
 
