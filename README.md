@@ -45,15 +45,16 @@ OPENAI_API_KEY=your_api_key_here
 
 ## Usage
 
-The scripts are designed to be chained together using Unix pipes. Example:
+The scripts by default read from stdin and write to stdout. You can also specify input/output files on the command line (see help for each program).
 
+Examples:
 ```bash
 # Full pipeline example
-python src/tojson.py < data/reviews.csv | \
-python src/summarize.py | \
-python src/embed.py | \
-python src/cluster.py --clusters 10 | \
-jq
+python src/tojson.py < data/reviews.sample.csv > data/reviews.json
+python src/summarize.py < data/reviews.json > data/summaries.json
+python src/embed.py < data/summaries.json > data/embed.json
+python src/cluster.py --clusters 10 < data/embed.json > data/clusters.10
+cat data/clusters.10 | jq
 ```
 
 ### Scripts
